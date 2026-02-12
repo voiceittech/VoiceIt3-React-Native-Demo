@@ -385,12 +385,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VoiceitReactNativeDemo-VoiceitReactNativeDemoTests/Pods-VoiceitReactNativeDemo-VoiceitReactNativeDemoTests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/VoiceIt2-IosSDK/VoiceIt2-IosSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/VoiceIt3-IosSDK/VoiceIt3-IosSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VoiceIt2-IosSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VoiceIt3-IosSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -507,12 +507,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VoiceitReactNativeDemo/Pods-VoiceitReactNativeDemo-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/VoiceIt2-IosSDK/VoiceIt2-IosSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/VoiceIt3-IosSDK/VoiceIt3-IosSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VoiceIt2-IosSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VoiceIt3-IosSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
