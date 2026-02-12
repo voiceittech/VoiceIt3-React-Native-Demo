@@ -1,4 +1,4 @@
-# React Native Demo
+# VoiceIt3 React Native Demo
 
 ## Getting started
 
