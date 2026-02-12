@@ -12,8 +12,7 @@ const options = {
   content_language: "CONTENT_LANGUAGE_HERE",
   phrase: "PHRASE",
   apiKey: "API_KEY_HERE",
-  apiToken: "API_TOKEN_HERE",
-  liveness: false
+  apiToken: "API_TOKEN_HERE"
   };
   ```
 
