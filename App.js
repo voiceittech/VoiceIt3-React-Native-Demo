@@ -1,7 +1,6 @@
-import {NativeModules, Button} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+import {NativeModules} from 'react-native';
 import React, {Component} from 'react';
-import {Platform, TouchableOpacity,StyleSheet, Image, Text, View} from 'react-native';
+import {TouchableOpacity,StyleSheet, Image, Text, View} from 'react-native';
 import logo from "./res/logo.png";
 
 const voiceItModule = NativeModules.Voiceit;
@@ -11,15 +10,13 @@ const options = {
   content_language: "CONTENT_LANGUAGE_HERE",
   phrase: "PHRASE",
   apiKey: "API_KEY_HERE",
-  apiToken: "API_TOKEN_HERE",
-  liveness: false
+  apiToken: "API_TOKEN_HERE"
   };
 
 export default class App extends Component{
   constructor () {
     super();
     this.state = {
-      checked: false,
       index: 0
     }
   }
@@ -32,19 +29,6 @@ export default class App extends Component{
     return(
       <View style={styles.container}>
       <Image resizeMode='contain' style={styles.image} source={logo}/>
-      <View style={styles.buttonPanel}>
-      <CheckBox
-      disabled={false}
-      value={this.state.checked}
-      onValueChange={()=>{this.setState({ checked: !this.state.checked });}}
-      />
-      <Button
-        title="Liveness Detection"
-        color= {Platform.OS === "ios" ? "#FFFFFF" : "#494949"}
-        disable="false"
-        onPress={() => {this.setState({ checked: !this.state.checked });}}
-      />
-      </View>
       <View style={styles.buttonPanel}>
       <TouchableOpacity
         activeOpacity = {.65}
@@ -66,7 +50,7 @@ export default class App extends Component{
       </TouchableOpacity>
       </View>
       <View style={styles.action}>
-      <Action liveness={this.state.checked} audioLiveness={false} index={this.state.index}></Action>
+      <Action index={this.state.index}></Action>
       </View>
       </View>
     );
@@ -93,7 +77,7 @@ export default class App extends Component{
     );
   }
   verifyFace(callback){
-      voiceItModule.encapsulatedFaceVerification(options.user_id,options.content_language, this.props.liveness,this.props.audioLiveness,
+      voiceItModule.encapsulatedFaceVerification(options.user_id,options.content_language,
       (successResponse)=>{callback(successResponse);},
       (failureResponse)=>{callback(failureResponse);}
     );
@@ -105,7 +89,7 @@ export default class App extends Component{
     );
   }
   verifyVideo(callback){
-    voiceItModule.encapsulatedVideoVerification(options.user_id,options.content_language, options.phrase, this.props.liveness,this.props.audioLiveness,
+    voiceItModule.encapsulatedVideoVerification(options.user_id,options.content_language, options.phrase,
       (successResponse)=>{callback(successResponse);},
       (failureResponse)=>{callback(failureResponse);}
     );
